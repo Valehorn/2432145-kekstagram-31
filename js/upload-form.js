@@ -3,8 +3,7 @@ import { pristine } from './validate-upload-form';
 import { resetScale } from './zoom';
 import { resetEffect } from './effects';
 import { uploadPicture } from './api';
-import { showUploadSuccess, showErrorUpload } from './message';
-import { showToastError } from './message';
+import { showUploadSuccess, showErrorUpload, showToastError } from './message';
 
 const FILE_TYPES = ['jpg', 'jpeg', 'png', 'gif', 'jfif'];
 

@@ -9,7 +9,7 @@ const templates = {
 };
 
 const onDocumentKeydown = (evt) => {
-  if (isEscapeKey(evt)) {
+  if (isEscapeKey) {
     evt.preventDefault();
     closeMessage();
   }

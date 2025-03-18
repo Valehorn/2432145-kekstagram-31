@@ -1,4 +1,4 @@
-import { renderBigPhoto } from './big-picture.js';
+import { renderPhoto } from './big-picture.js';
 import { configUploadHandlers } from './upload-form.js';
 import { fetchPictures } from './api.js';
 import { showFetchError } from './message.js';
@@ -8,7 +8,7 @@ const bootstrapApp = async () => {
   configUploadHandlers();
   try {
     const pictures = await fetchPictures();
-    renderBigPhoto(pictures);
+    renderPhoto(pictures);
     configFilter(pictures);
   } catch {
     showFetchError();

@@ -4,11 +4,11 @@ import { renderPictures } from './picture.js';
 const pictureContainer = document.querySelector('.pictures');
 let pictures = [];
 
-const clearBigPhoto = () => {
+const clearPhotoContainer = () => {
   pictureContainer.querySelectorAll('a.picture').forEach((item) => item.remove());
 };
 
-const onBigPhotoClick = (evt) => {
+const onPhotoClick = (evt) => {
   const picture = evt.target.closest('a.picture[data-id]');
   if (!picture) {
     return;
@@ -19,12 +19,12 @@ const onBigPhotoClick = (evt) => {
   openModal(pictureData);
 };
 
-const renderBigPhoto = (picturesData) => {
-  clearBigPhoto();
+const renderPhoto = (picturesData) => {
+  clearPhotoContainer();
   pictures = picturesData;
   renderPictures(picturesData);
-  pictureContainer.addEventListener('click', onBigPhotoClick);
+  pictureContainer.addEventListener('click', onPhotoClick);
 };
 
 
-export { renderBigPhoto };
+export { renderPhoto };

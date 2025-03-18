@@ -1,4 +1,4 @@
-import { renderBigPhoto } from './big-picture';
+import { renderPhoto } from './big-picture';
 import { debounce } from './util';
 
 const FILTER = {
@@ -19,7 +19,7 @@ let currentFilter = FILTER.default;
 let pictures = [];
 const filterElement = document.querySelector('.img-filters');
 
-const debounceRender = debounce(renderBigPhoto);
+const debounceRender = debounce(renderPhoto);
 
 const applyFilter = () => {
   let filteredPictures = [];
